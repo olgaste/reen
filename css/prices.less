@@ -1,0 +1,91 @@
+/* Configs */
+@default_margin: 50px;
+@background_color: #506a85;
+@active_color: #00bc9c;
+@text_color: #506a85;
+@footer_color: #98B1BF;
+@border_color: #e6e9ed;
+
+/*Layout*/
+.prices{
+	margin-bottom: @default_margin;
+
+	.item{
+		.price-info{
+			background-color: #2F4052;
+			padding: 20px;
+			color: #fff;
+
+			p{
+				margin-bottom: 0;
+			}
+
+			button{
+				display: block;
+				margin: 0 auto;
+			}
+
+			sub, sup{
+				color: #acb3ba;
+				font-size: 2rem;
+			}
+
+			sup{
+				top: -3.5rem;
+			}
+			.amount{
+				font-size: 7rem;
+				font-weight: 400;
+			}
+		}
+
+		.price-description{
+			background: #F5F7FA;
+			border: 1px solid @border_color;
+			border-top: 0;
+			padding: 20px;
+
+			ul{
+				margin: 0;
+				padding: 0;
+			}
+
+			li{
+				padding: 5px;
+				list-style: none;
+
+			}
+
+			li:nth-last-child(n+1){
+				border-bottom: 1px solid @border_color; 
+			}
+		}
+	}
+}
+
+.questions-block{
+	background: #f2f5f7;
+	padding-bottom: @default_margin;
+}
+
+.bottom-mod{
+	background-color: @active_color;
+	padding: 80px 0;
+
+	h1{
+		color: #fff;
+		text-align: center;
+	}
+}
+
+/*Modules*/
+.pricing-info h4{
+	padding-top: 20px;
+}
+
+.contact-btn{
+	background-color: #fff;
+	color: @active_color;
+	font-weight: bold;
+	margin-left: 20px; 
+}

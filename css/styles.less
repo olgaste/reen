@@ -1,0 +1,232 @@
+/* Configs */
+@default_margin: 50px;
+@background_color: #506a85;
+@active_color: #00bc9c;
+@text_color: #506a85;
+@footer_color: #98B1BF;
+@border_color: #e6e9ed;
+
+
+/*Base styles*/
+
+img{
+	width: 100%;
+	margin: auto;
+}
+
+body{
+	color: @text_color;
+	font-family: 'Source Sans Pro';
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Lato';
+	font-weight: bold;
+}
+.submit-btn{
+	background-color: @active_color;
+	border-color: @active_color;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+/* Home page*/
+
+.features-block {
+	.glyphicon{
+		color: green;
+		font-size: 30px;
+		margin-top: 30px;
+	}
+}
+
+.our-work{
+	background: #cecece;
+	padding-bottom: @default_margin;
+}
+
+.gallery{
+	margin-top: @default_margin;
+}
+
+.description{
+	padding-bottom: @default_margin;
+}
+
+/* Layouts */
+
+header{
+	background: #f5f7fa;
+	border-bottom: 1px solid @border_color; 
+	line-height: 9vh;
+
+	.fa{
+		margin: 0 5px;
+	}
+}
+
+.main-menu{
+	.navbar-default{
+		background: none;
+		border: none;
+	}
+
+	.navbar-brand{
+		padding-left: 0; 
+	}
+
+	.navbar-form{
+		padding-right: 0;
+	}
+}
+
+.under-main-menu{
+	color: @border_color;
+	margin: 0;
+}
+
+/*Modules*/
+.glyphicon-envelope,
+.glyphicon-phone{
+	padding-right: 5px;
+}
+
+.title{
+	width: 70%;
+	margin: @default_margin auto;
+}
+
+.carousel{
+	.jumbotron{
+		background: none;
+	}
+
+	.carousel-caption{
+		padding-top: 0;
+	}
+
+	.carousel-indicators{
+		bottom: -20px;
+		background: #fff;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+		width: 200px;
+
+		li{
+			border: none;
+			background-color: @background_color;
+
+			&.active{
+				background-color: @active_color;
+				width: 10px;
+				height: 10px;
+				margin: 1px;
+			} 
+		}
+	}
+
+	.carousel-control:focus, .carousel-control:hover{
+		opacity: 1;
+	}
+
+	.carousel-control{
+		opacity: 1;
+
+		.custom-control{
+			top: 0;
+			position: absolute;
+			bottom: 0;
+			margin: auto;
+			height: 60px;
+			opacity: 1;
+
+			&:before{
+				display: inline-block;
+				margin: 20px;
+			}
+		}
+
+		.custom-control:hover{
+			background-color: @background_color;
+			color: @active_color;
+			
+			border-radius: 3px;
+		}
+	}
+	
+	.carousel-control.left, .carousel-control.right{
+		background: none;
+	}
+}
+
+/* State */
+
+.navbar-default .navbar-nav>li>a{
+	font-weight: bold;
+}
+
+.navbar-default .navbar-nav>li>a:hover{
+	color: @active_color;
+}
+
+.submit-btn:hover{
+	opacity: 0.9;
+	background-color: @active_color;
+	border-color: @active_color;
+	color: #fff;
+}
+
+img:hover{
+	opacity: .5;
+}
+
+.fa:hover,
+.glyphicon:hover{
+	opacity: .5;
+	cursor: pointer;
+}
+
+/* Back to top button */
+
+.cd-top {
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+	overflow: hidden;
+	text-indent: 100%;
+	white-space: nowrap;
+	background: @text_color url(../images/cd-top-arrow.svg) no-repeat center 50%;
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: opacity .3s 0s, visibility 0s .3s;
+	-moz-transition: opacity .3s 0s, visibility 0s .3s;
+	transition: opacity .3s 0s, visibility 0s .3s;
+	border-radius: 3px;
+}
+
+.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+	-webkit-transition: opacity .3s 0s, visibility 0s 0s;
+	-moz-transition: opacity .3s 0s, visibility 0s 0s;
+	transition: opacity .3s 0s, visibility 0s 0s;
+}
+
+.cd-top.cd-is-visible {
+	visibility: visible;
+	opacity: 1;
+}
+
+.cd-top.cd-fade-out {
+	opacity: .5;
+}
+
+.no-touch .cd-top:hover {
+	color: @active_color;
+	opacity: 1;
+}
