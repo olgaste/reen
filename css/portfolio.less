@@ -1,10 +1,5 @@
 /* Configs */
-@default_margin: 50px;
-@background_color: #506a85;
-@active_color: #00bc9c;
-@text_color: #506a85;
-@footer_color: #98B1BF;
-@border_color: #e6e9ed;
+@import '../css/configs.less';
 
 /* Layouts */
 
@@ -16,17 +11,19 @@
 /* Modules */
 
 .portfolio-categories{
-	border-top: 1px solid #E9E9E9;
+	position: relative;
+	top: -41px;
 	margin: 30px;
 }
 
-.categories-offset{
-	margin-left: 30%;
+hr{
+	margin: 20px 50px;
 }
 
 .categories-list{
-	margin-top: -11px;
 	background-color: #fff;
+	width: 40%;
+	margin: 0 auto;
 }
 
 .portfolio-img {
@@ -55,4 +52,12 @@
 .portfolio-img:hover{
 	opacity: .5;
 	background-color: #17A78B;
+}
+
+/* Media queries */
+
+@media (max-width: 1086px) {
+	.categories-list{
+		width: 90%;
+	} 
 }
